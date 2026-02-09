@@ -105,7 +105,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 5rem;
-            /* Corrección: Alineación superior para evitar estiramientos extraños */
+            /* Alineación superior para evitar estiramientos extraños */
             align-items: start;
         }
 
@@ -114,19 +114,17 @@
             flex-direction: column;
             text-decoration: none;
             color: inherit;
-            /* Opcional: si quisieras que todas las tarjetas midan lo mismo, podrías usar height: 100% aquí, 
-               pero con align-items: start en el grid, esto permite alturas naturales */
         }
 
-        /* CORRECCIÓN DE IMAGEN ESTRUCTURAL */
+        /* ESTRUCTURA DE IMAGEN */
         .project-image-wrapper {
             background-color: #f3f4f6;
             width: 100%;
-            /* Usamos aspect-ratio moderno en lugar del padding hack */
+            /* Aspect ratio moderno 16:9 */
             aspect-ratio: 16 / 9;
             position: relative;
             margin-bottom: 1.5rem;
-            overflow: hidden; /* Clave para que la imagen no se desborde */
+            overflow: hidden; 
             border-radius: 2px;
         }
 
@@ -271,33 +269,55 @@
         <h2>Trabajos Seleccionados</h2>
         
         <div class="project-grid">
+            
+            <!-- PROYECTO NUEVO: LUMINA -->
             <article class="project-card">
                 <div class="project-image-wrapper">
-                    <img src="orbit-digital.png" alt="Orbit Digital Website" class="project-image">
+                    <img src="https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?w=800&q=80" alt="Lumina Visual Portfolio Interface" class="project-image">
+                </div>
+                <div class="project-info">
+                    <h3>LUMINA | Visual Portfolio</h3>
+                    <p class="project-desc">
+                        Galería fotográfica profesional con diseño minimalista, arquitectura masonry y experiencia inmersiva mediante cursores personalizados.
+                    </p>
+                    
+                    <!-- Enlace actualizado con el texto estandarizado -->
+                    <a href="https://famous-biscotti-844700.netlify.app/" target="_blank" rel="noopener noreferrer" class="demo-link">Ver Demo en Vivo</a>
+                    
+                    <span class="project-tags">HTML5 / CSS3 / NATIVE JS</span>
+                </div>
+            </article>
+
+            <!-- PROYECTO EXISTENTE 1 -->
+            <article class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="orbit-digital.png" alt="Orbit Digital Website" class="project-image" onerror="this.style.display='none';"> <!-- Fallback simple si no existe la imagen local -->
                 </div>
                 <div class="project-info">
                     <h3>Orbit Digital</h3>
                     <p class="project-desc">Web Corporativa para Agencia de Software</p>
                     
-                    <a href="https://orbitdigitalweb.netlify.app/" target="_blank" class="https://orbitdigitalweb.netlify.app/">Ver Demo en Vivo</a>
+                    <a href="https://orbitdigitalweb.netlify.app/" target="_blank" class="demo-link">Ver Demo en Vivo</a>
                     
                     <span class="project-tags">HTML / CSS / JS</span>
                 </div>
             </article>
 
+            <!-- PROYECTO EXISTENTE 2 -->
             <article class="project-card">
                 <div class="project-image-wrapper">
-                    <img src="focusflow.png" alt="FocusFlow Landing Page" class="project-image">
+                    <img src="focusflow.png" alt="FocusFlow Landing Page" class="project-image" onerror="this.style.display='none';">
                 </div>
                 <div class="project-info">
                     <h3>FocusFlow</h3>
                     <p class="project-desc">Landing Page para App de Productividad</p>
                     
-                    <a href="https://focusfloweb1.netlify.app/" target="_blank" class="https://focusfloweb1.netlify.app/">Ver Demo en Vivo</a>
+                    <a href="https://focusfloweb1.netlify.app/" target="_blank" class="demo-link">Ver Demo en Vivo</a>
                     
                     <span class="project-tags">HTML / CSS / JS</span>
                 </div>
             </article>
+
         </div>
     </section>
 
